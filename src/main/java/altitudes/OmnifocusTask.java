@@ -58,6 +58,9 @@ public class OmnifocusTask {
 	private Date start;
 
 	@XmlElement
+	private Date due;
+
+	@XmlElement
 	private Date completed;
 
 	@XmlElement
@@ -218,6 +221,14 @@ public class OmnifocusTask {
 
 	public void setFlagged(Boolean flagged) {
 		this.flagged = flagged;
+	}
+
+	public Date getDue() {
+		return due;
+	}
+
+	public void setDue(Date due) {
+		this.due = due;
 	}
 
 	
