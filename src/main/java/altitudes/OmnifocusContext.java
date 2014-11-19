@@ -61,6 +61,11 @@ public class OmnifocusContext {
 		this.context = context;
 	}
 
+	/**
+	 * Indicates whether the context is on-hold.
+	 * 
+	 * @return
+	 */
 	public Boolean getProhibitsNextAction() {
 		return prohibitsNextAction;
 	}
@@ -85,6 +90,11 @@ public class OmnifocusContext {
 		this.modified = modified;
 	}
 
+	/**
+	 * Indicates whether the context is dropped
+	 * 
+	 * @return
+	 */
 	public Boolean getHidden() {
 		return hidden;
 	}

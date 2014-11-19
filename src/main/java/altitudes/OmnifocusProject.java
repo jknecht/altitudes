@@ -35,6 +35,11 @@ public class OmnifocusProject {
 		this.folder = folder;
 	}
 
+	/**
+	 * Indicates whether the project order is "Single Actions"
+	 * 
+	 * @return
+	 */
 	public Boolean getSingleton() {
 		return singleton;
 	}
