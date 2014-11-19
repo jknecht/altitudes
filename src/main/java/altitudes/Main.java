@@ -21,6 +21,7 @@ public class Main {
 		JaxbAnnotationModule jaxbModule = new JaxbAnnotationModule();
 		XmlMapper mapper = new XmlMapper(module);
 		mapper.registerModule(jaxbModule);
+		mapper.configure(DeserializationFeature.READ_ENUMS_USING_TO_STRING, true);
 		mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 		
 		File omnifocusPackage = new File(System.getProperty("user.home"), "Library/Application Support/OmniFocus/OmniFocus.ofocus");

@@ -1,5 +1,7 @@
 package altitudes;
 
+import java.util.Date;
+
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
@@ -16,6 +18,12 @@ public class OmnifocusFolder {
 	@XmlElement
 	private OmnifocusReference folder;
 
+	@XmlElement
+	private Date added;
+	
+	@XmlElement
+	private Date modified;
+	
 	public String getId() {
 		return id;
 	}
@@ -47,6 +55,23 @@ public class OmnifocusFolder {
 	public void setFolder(OmnifocusReference folder) {
 		this.folder = folder;
 	}
+
+	public Date getAdded() {
+		return added;
+	}
+
+	public void setAdded(Date added) {
+		this.added = added;
+	}
+
+	public Date getModified() {
+		return modified;
+	}
+
+	public void setModified(Date modified) {
+		this.modified = modified;
+	}
+	
 	
 	
 }

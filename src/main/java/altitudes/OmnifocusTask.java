@@ -7,6 +7,32 @@ import javax.xml.bind.annotation.XmlElement;
 
 public class OmnifocusTask {
 	
+	public static enum Order {
+		parallel,
+		sequential
+	}
+	
+	public static enum RepetitionMethod {
+		fixed,
+		startAfterCompletion("start-after-completion"),
+		dueAfterCompletion("due-after-completion");
+		
+		private String value;
+		
+		private RepetitionMethod() {
+			this.value = this.name();
+		}
+		
+		private RepetitionMethod(String value) {
+			this.value = value;
+		}
+		
+		@Override
+		public String toString() {
+			return value;
+		}
+	}
+	
 	@XmlAttribute
 	private String id;
 	
@@ -20,7 +46,7 @@ public class OmnifocusTask {
 	private OmnifocusProject project;
 
 	@XmlElement
-	private String order;
+	private Order order;
 
 	@XmlElement
 	private OmnifocusReference context;
@@ -47,8 +73,17 @@ public class OmnifocusTask {
 	private String repetitionRule;
 
 	@XmlElement(name="repetition-method")
-	private String repetitionMethod;
+	private RepetitionMethod repetitionMethod;
 
+	@XmlElement(name="estimated-minutes")
+	private Integer estimatedMinutes;
+	
+	@XmlElement(name="completed-by-children")
+	private Boolean completedByChildren;
+	
+	@XmlElement
+	private Boolean flagged;
+	
 	public String getId() {
 		return id;
 	}
@@ -81,11 +116,11 @@ public class OmnifocusTask {
 		this.project = project;
 	}
 
-	public String getOrder() {
+	public Order getOrder() {
 		return order;
 	}
 
-	public void setOrder(String order) {
+	public void setOrder(Order order) {
 		this.order = order;
 	}
 
@@ -153,12 +188,36 @@ public class OmnifocusTask {
 		this.repetitionRule = repetitionRule;
 	}
 
-	public String getRepetitionMethod() {
+	public RepetitionMethod getRepetitionMethod() {
 		return repetitionMethod;
 	}
 
-	public void setRepetitionMethod(String repetitionMethod) {
+	public void setRepetitionMethod(RepetitionMethod repetitionMethod) {
 		this.repetitionMethod = repetitionMethod;
+	}
+
+	public Integer getEstimatedMinutes() {
+		return estimatedMinutes;
+	}
+
+	public void setEstimatedMinutes(Integer estimatedMinutes) {
+		this.estimatedMinutes = estimatedMinutes;
+	}
+
+	public Boolean getCompletedByChildren() {
+		return completedByChildren;
+	}
+
+	public void setCompletedByChildren(Boolean completedByChildren) {
+		this.completedByChildren = completedByChildren;
+	}
+
+	public Boolean getFlagged() {
+		return flagged;
+	}
+
+	public void setFlagged(Boolean flagged) {
+		this.flagged = flagged;
 	}
 
 	

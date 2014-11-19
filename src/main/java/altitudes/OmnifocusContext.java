@@ -1,5 +1,7 @@
 package altitudes;
 
+import java.util.Date;
+
 import javax.xml.bind.annotation.XmlElement;
 
 public class OmnifocusContext {
@@ -14,7 +16,16 @@ public class OmnifocusContext {
 
 	@XmlElement
 	private OmnifocusReference context;
+	
+	@XmlElement(name="prohibits-next-action")
+	private Boolean prohibitsNextAction;
 
+	@XmlElement
+	private OmnifocusAddedDate added;
+	
+	@XmlElement
+	private Date modified;
+	
 	public String getId() {
 		return id;
 	}
@@ -46,6 +57,31 @@ public class OmnifocusContext {
 	public void setContext(OmnifocusReference context) {
 		this.context = context;
 	}
+
+	public Boolean getProhibitsNextAction() {
+		return prohibitsNextAction;
+	}
+
+	public void setProhibitsNextAction(Boolean prohibitsNextAction) {
+		this.prohibitsNextAction = prohibitsNextAction;
+	}
+
+	public OmnifocusAddedDate getAdded() {
+		return added;
+	}
+
+	public void setAdded(OmnifocusAddedDate added) {
+		this.added = added;
+	}
+
+	public Date getModified() {
+		return modified;
+	}
+
+	public void setModified(Date modified) {
+		this.modified = modified;
+	}
+	
 	
 	
 }
