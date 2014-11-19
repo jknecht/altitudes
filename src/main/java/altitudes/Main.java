@@ -3,22 +3,18 @@ package altitudes;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.util.ArrayList;
 import java.util.zip.ZipEntry;
+import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
-import java.util.zip.ZipInputStream;
 
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.dataformat.xml.JacksonXmlModule;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule;
 
 public class Main {
 
-	public static void main(String[] args) throws JsonParseException, JsonMappingException, MalformedURLException, IOException {
+	public static void main(String[] args) throws ZipException, IOException  {
 		JacksonXmlModule module = new JacksonXmlModule();
 		module.setDefaultUseWrapper(false);
 		
