@@ -26,6 +26,9 @@ public class OmnifocusContext {
 	@XmlElement
 	private Date modified;
 	
+	@XmlElement
+	private Boolean hidden;
+	
 	public String getId() {
 		return id;
 	}
@@ -80,6 +83,14 @@ public class OmnifocusContext {
 
 	public void setModified(Date modified) {
 		this.modified = modified;
+	}
+
+	public Boolean getHidden() {
+		return hidden;
+	}
+
+	public void setHidden(Boolean hidden) {
+		this.hidden = hidden;
 	}
 	
 	
