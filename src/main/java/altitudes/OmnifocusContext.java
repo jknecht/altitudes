@@ -4,14 +4,48 @@ import javax.xml.bind.annotation.XmlElement;
 
 public class OmnifocusContext {
 	@XmlElement
-	String id;
+	private String id;
 	
 	@XmlElement
-	String name;
+	private String name;
 	
 	@XmlElement
-	Long rank;
+	private Long rank;
 
 	@XmlElement
-	OmnifocusReference context;
+	private OmnifocusReference context;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Long getRank() {
+		return rank;
+	}
+
+	public void setRank(Long rank) {
+		this.rank = rank;
+	}
+
+	public OmnifocusReference getContext() {
+		return context;
+	}
+
+	public void setContext(OmnifocusReference context) {
+		this.context = context;
+	}
+	
+	
 }

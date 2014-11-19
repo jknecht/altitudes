@@ -8,11 +8,27 @@ import javax.xml.bind.annotation.XmlValue;
 
 public class OmnifocusAddedDate {
 	
-	
 	@XmlValue
-	Date value;
+	private Date value;
 
 	@XmlAttribute(name="order", required=false)
-	Integer order;
+	private Integer order;
 
+	public Date getValue() {
+		return value;
+	}
+
+	public void setValue(Date value) {
+		this.value = value;
+	}
+
+	public Integer getOrder() {
+		return order;
+	}
+
+	public void setOrder(Integer order) {
+		this.order = order;
+	}
+
+	
 }

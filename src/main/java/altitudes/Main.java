@@ -45,14 +45,14 @@ public class Main {
 			
 			OmniFocusDocument doc = mapper.readValue(zipFile.getInputStream(contents), OmniFocusDocument.class);
 	
-			for (OmnifocusContext task : doc.contexts) {
-				System.out.println(task.name);
+			for (OmnifocusContext task : doc.getContexts()) {
+				System.out.println(task.getName());
 			}
-			for (OmnifocusFolder task : doc.folders) {
-				System.out.println(task.name);
+			for (OmnifocusFolder task : doc.getFolders()) {
+				System.out.println(task.getName());
 			}
-			for (OmnifocusTask task : doc.tasks) {
-				System.out.println(task.id + " - " + task.name + " [" + task.added.value + "] " + task.added.order);
+			for (OmnifocusTask task : doc.getTasks()) {
+				System.out.println(task.getId() + " - " + task.getName() + " [" + task.getAdded().getValue() + "] " + task.getAdded().getOrder());
 			}
 		}
 	}

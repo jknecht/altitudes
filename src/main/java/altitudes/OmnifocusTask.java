@@ -8,45 +8,158 @@ import javax.xml.bind.annotation.XmlElement;
 public class OmnifocusTask {
 	
 	@XmlAttribute
-	String id;
+	private String id;
 	
 	@XmlElement
-	String name;
+	private String name;
 
 	@XmlElement
-	Long rank;
+	private Long rank;
 
 	@XmlElement
-	OmnifocusProject project;
+	private OmnifocusProject project;
 
 	@XmlElement
-	String order;
+	private String order;
 
 	@XmlElement
-	OmnifocusReference context;
+	private OmnifocusReference context;
 
 	@XmlElement
-	OmnifocusReference task;
+	private OmnifocusReference task;
 
 	@XmlElement
-	Date start;
+	private Date start;
 
 	@XmlElement
-	Date completed;
+	private Date completed;
 
 	@XmlElement
-	OmnifocusAddedDate added;
+	private OmnifocusAddedDate added;
 
 	@XmlElement
-	Date modified;
+	private Date modified;
 
 	@XmlElement
-	String repeat;
+	private String repeat;
 
 	@XmlElement(name="repetition-rule")
-	String repetitionRule;
+	private String repetitionRule;
 
 	@XmlElement(name="repetition-method")
-	String repetitionMethod;
+	private String repetitionMethod;
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Long getRank() {
+		return rank;
+	}
+
+	public void setRank(Long rank) {
+		this.rank = rank;
+	}
+
+	public OmnifocusProject getProject() {
+		return project;
+	}
+
+	public void setProject(OmnifocusProject project) {
+		this.project = project;
+	}
+
+	public String getOrder() {
+		return order;
+	}
+
+	public void setOrder(String order) {
+		this.order = order;
+	}
+
+	public OmnifocusReference getContext() {
+		return context;
+	}
+
+	public void setContext(OmnifocusReference context) {
+		this.context = context;
+	}
+
+	public OmnifocusReference getTask() {
+		return task;
+	}
+
+	public void setTask(OmnifocusReference task) {
+		this.task = task;
+	}
+
+	public Date getStart() {
+		return start;
+	}
+
+	public void setStart(Date start) {
+		this.start = start;
+	}
+
+	public Date getCompleted() {
+		return completed;
+	}
+
+	public void setCompleted(Date completed) {
+		this.completed = completed;
+	}
+
+	public OmnifocusAddedDate getAdded() {
+		return added;
+	}
+
+	public void setAdded(OmnifocusAddedDate added) {
+		this.added = added;
+	}
+
+	public Date getModified() {
+		return modified;
+	}
+
+	public void setModified(Date modified) {
+		this.modified = modified;
+	}
+
+	public String getRepeat() {
+		return repeat;
+	}
+
+	public void setRepeat(String repeat) {
+		this.repeat = repeat;
+	}
+
+	public String getRepetitionRule() {
+		return repetitionRule;
+	}
+
+	public void setRepetitionRule(String repetitionRule) {
+		this.repetitionRule = repetitionRule;
+	}
+
+	public String getRepetitionMethod() {
+		return repetitionMethod;
+	}
+
+	public void setRepetitionMethod(String repetitionMethod) {
+		this.repetitionMethod = repetitionMethod;
+	}
+
+	
 }
